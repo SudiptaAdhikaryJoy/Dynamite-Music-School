@@ -1,4 +1,6 @@
 import React, { useEffect,useState } from 'react';
+import { Row } from 'react-bootstrap';
+import Header from '../Header/Header';
 import Service from '../Service.js/Service';
 
 const Services = () => {
@@ -17,15 +19,20 @@ const Services = () => {
  
 
     return (
-        <div>
-           <h2>i have: {services.length}</h2>
-           {
+        
+          <Row xs={2} md={3} className="g-4 mt-3">
+            {
                services.map(service => <Service 
                 key={service.name}
                 service={service}></Service>)
            }
+  
+</Row>
+
            
-        </div>
+           
+           
+        
     );
 };
 
