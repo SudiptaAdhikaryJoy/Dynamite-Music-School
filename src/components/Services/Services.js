@@ -1,23 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect,useState } from 'react';
+import Service from '../Service.js/Service';
 
 const Services = () => {
     const [services, setServices] = useState([]);
-    useEffect(() => {
-         fetch(`/public/dataBase.json`)
+    // useEffect(() => {
+    //      fetch('/public/fakeDb.json')
+    //      .then(res => res.json())
+    //      .then(data => console.log('fakedata',data))
+    // },[]);
+    // console.log(services);
+    useEffect(()=>{
+         fetch(`https://sudiptaadhikaryjoy.github.io/gaming-material/Db.JSON`)
          .then(res => res.json())
          .then(data => setServices(data))
     },[]);
-    console.log(services);
+ 
 
     return (
-        <div className="services-container">
-            <h1>services</h1>
-
-            <div className="search-box">
-                <input type="text" className="p-2" placeholder="Search" />
-                <button className="btn btn-danger p-2">Search</button>
-            </div>
-            
+        <div>
+           <h2>i have: {services.length}</h2>
+           {
+               services.map(service => <Service 
+                key={service.name}
+                service={service}></Service>)
+           }
+           
         </div>
     );
 };

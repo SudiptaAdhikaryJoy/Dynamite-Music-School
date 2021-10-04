@@ -8,6 +8,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import { useEffect } from 'react';
 import NotFound from './components/NotFound/NotFound';
+import Features from './components/Features/Features';
 
 function App() {
  
@@ -28,6 +29,9 @@ function App() {
         </Route>
         <Route path="/services">
           <Services></Services>
+        </Route>
+        <Route path="/features">
+          <Features></Features>
         </Route>
         <Route path="*">
           <NotFound></NotFound>
