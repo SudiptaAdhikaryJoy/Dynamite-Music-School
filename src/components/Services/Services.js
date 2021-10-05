@@ -12,6 +12,7 @@ const Services = () => {
     // },[]);
     // console.log(services);
     useEffect(()=>{
+      // make fake data and push this github and fetch this using url
          fetch(`https://sudiptaadhikaryjoy.github.io/gaming-material/Db.JSON`)
          .then(res => res.json())
          .then(data => setServices(data))

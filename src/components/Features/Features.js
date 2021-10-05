@@ -5,6 +5,7 @@ import Feature from './Feature';
 const Features = () => {
     const [features,setFeatures] = useState([])
     useEffect(()=>{
+        // make fake data and push this github and fetch this using url
         const url = `https://sudiptaadhikaryjoy.github.io/Football-Dashboard/fakeDb.JSON`;
         fetch(url)
         .then(res => res.json())
