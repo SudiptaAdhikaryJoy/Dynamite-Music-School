@@ -16,24 +16,15 @@ const Services = () => {
          .then(res => res.json())
          .then(data => setServices(data))
     },[]);
- 
-
     return (
         
           <Row xs={2} md={3} className="g-1 mt-2">
             {
                services.map(service => <Service 
                 key={service.name}
-                service={service}></Service>)
-                
+                service={service}></Service>)               
            }
-  
-</Row>
-
-           
-           
-           
-        
+          </Row>     
     );
 };
 
