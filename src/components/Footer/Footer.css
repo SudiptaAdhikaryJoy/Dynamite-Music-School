@@ -3,9 +3,12 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     background-color: dimgrey;
+    
 }
 
-#overview{
-    color: #fff;
-    text-decoration: none;
+#learning{
+    color: whitesmoke;
+}
+#help{
+    color: whitesmoke;
 }

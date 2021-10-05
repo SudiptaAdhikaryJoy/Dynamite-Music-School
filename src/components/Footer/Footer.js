@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -8,8 +8,10 @@ const Footer = () => {
         <div className="footer-part">
             <div>
                 <h1>Music Learning</h1>
-                <p>Musically</p>
-                <p>Api</p>
+                <div id="learning">
+                    <p>Musically</p>
+                    <p>Api</p>
+                </div>
             </div>
             <div>
                 <h1>Overview</h1>
@@ -20,15 +22,19 @@ const Footer = () => {
                 <Link to="/services" style={{ textDecoration: 'none', color: 'whiteSmoke' }}>
                 <p>Services</p>
                 </Link>
+                <Link to="/about" style={{ textDecoration: 'none', color: 'whiteSmoke' }}>
+                <p>About</p>
+                </Link>
                 </div>
                 
-                <p>Contact</p>
             </div>
             <div>
                 <h1>Help</h1>
-                <p>Contact us</p>
-                <p>Email:hello@gmail.com</p>
-                <p>www.dynamite.music.school.com</p>
+                <div id="help">
+                    <p>Contact us</p>
+                    <p>Email:hello@gmail.com</p>
+                    <p>www.dynamite.music.school.com</p>
+                </div>
             </div>
         </div>
     );
