@@ -20,11 +20,12 @@ const Services = () => {
 
     return (
         
-          <Row xs={2} md={3} className="g-4 mt-3">
+          <Row xs={2} md={3} className="g-1 mt-2">
             {
                services.map(service => <Service 
                 key={service.name}
                 service={service}></Service>)
+                
            }
   
 </Row>

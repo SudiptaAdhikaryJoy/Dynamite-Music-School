@@ -1,19 +1,22 @@
 import React from 'react';
 import { Card, Button, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './Service.css';
 
 const Service = (props) => {
-    const {name, img, artist, price, days} = props.service;
+    const {name, img, artist, price, days, duration} = props.service;
     return (
       <Col>
-      <Card>
-        <Card.Img w-25 variant="top" src={img} className="img-fluid  h-50" />
+      <Card style={{width:"70%", height:"70%"}}>
+        <Card.Img variant="top" src={img} className="img-fluid h-50" />
         <Card.Body>
           <Card.Title>Name: {name}</Card.Title>
-          <Card.Text>
-            This is a longer card with supporting text below as a natural
-            lead-in to additional content. This content is a little bit longer.
-          </Card.Text>
+          <Card.Text>Artist: {artist}</Card.Text>
+          <Card.Text>Days: {days}</Card.Text>
+          <Card.Text>Duration: {duration}</Card.Text>
+          <Link to="/features/:id">
+            <button className="link-style" >Buy Now</button>
+          </Link>
         </Card.Body>
       </Card>
     </Col>

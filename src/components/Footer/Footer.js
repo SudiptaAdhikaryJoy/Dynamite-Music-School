@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
+    
     return (
         <div className="footer-part">
             <div>
@@ -11,8 +13,15 @@ const Footer = () => {
             </div>
             <div>
                 <h1>Overview</h1>
-                <p>About</p>
-                <p>Service</p>
+                <div>
+                    <Link to="/home" style={{ textDecoration: 'none', color: 'whiteSmoke' }}>
+                <p>Home</p>
+                </Link>
+                <Link to="/services" style={{ textDecoration: 'none', color: 'whiteSmoke' }}>
+                <p>Services</p>
+                </Link>
+                </div>
+                
                 <p>Contact</p>
             </div>
             <div>
