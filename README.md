@@ -1,4 +1,4 @@
-#Dynamite Music School
+## Dynamite Music School
 
 #In this project basically we are using React Routing and how it works and when page is not show the 404
 
